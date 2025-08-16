@@ -1,10 +1,17 @@
-import { useGlobalContext } from './Context.jsx';
+import Navbar from './Navbar.jsx';
+import Hero from './Hero.jsx';
+import Sidebar from './Sidebar.jsx';
+import Submenu from './Submenu.jsx';
 
 const App = () => {
-	const { isSidebarOpen } = useGlobalContext();
-	console.log(isSidebarOpen);
-
-	return <h1>Strapi Submenus Clone</h1>;
+	return (
+		<main>
+			<Navbar />
+			<Hero />
+			<Sidebar />
+			<Submenu />
+		</main>
+	);
 };
 
 export default App;
