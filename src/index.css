@@ -11,6 +11,7 @@ html {
 }
 
 :root {
+	--primary-background: #181826;
 	--primary-100: #dbeafe;
 	--primary-200: #bfdbfe;
 	--primary-300: #a5b4fc;
@@ -248,7 +249,7 @@ ul {
 }
 
 body {
-	background: var(--primary-500);
+	background: var(--primary-background);
 }
 nav {
 	height: 5rem;
@@ -280,4 +281,36 @@ nav {
 }
 .toggle-btn:hover {
 	transform: scale(1.05);
+}
+
+.hero-container {
+	min-height: calc(100vh - 10rem);
+	display: grid;
+	place-items: center;
+}
+.hero-center {
+	color: var(--white);
+	width: var(--fluid-width);
+	max-width: var(--max-width);
+}
+.hero-center h1 {
+	font-size: clamp(2rem, 3vw, 4rem);
+	margin-bottom: 1rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+.hero-center p {
+	line-height: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+	.hero-center {
+		text-align: center;
+	}
+	.hero-center p {
+		max-width: 35em;
+		margin: 0 auto;
+	}
+	.toggle-btn {
+		display: none;
+	}
 }
